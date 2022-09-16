@@ -9,12 +9,41 @@ body{
     padding: 0;
     margin: 0;
     border: 0;
+}
+#titulo{
+    border: 0;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
     align-items: center;
     align-content: center;
     vertical-align: middle;
-    line-height: 100vh;
+    line-height: 10vh;
     font-family: 'Times New Roman', Times, serif;
     font-size: 10vh;
     color: red;
+}
+#links{
+    border: 0;
+    margin: 0;
+    width: 200px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+}
+#icone{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+#secret{
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 16px;
+    line-height: 16px;
+    padding-top: 50px;
 }
