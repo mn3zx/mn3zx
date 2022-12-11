@@ -4,29 +4,32 @@ body{
     padding: 0;
 }
 #gradiente{
+    position: relative;
     width: 100vw;
     height: 100vh;
     padding: 0;
     margin: 0;
     border: 0;
 }
-#titulo{
+.titulo{
+    position: relative;
     border: 0;
     margin: 0;
-    padding-top: 50px;
+    top: 50px;
     text-align: center;
     align-items: center;
     align-content: center;
     vertical-align: middle;
     line-height: 10vh;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 10vh;
+    font-size: 90px;
     color: red;
 }
 #clock{
+    position: relative;
     border: 0;
     margin: 0;
-    padding: 50px;
+    top: 80px;
     font-family: 'Courier New', Courier, monospace;
     font-size: x-large;
     font-weight: bold;
@@ -35,7 +38,9 @@ body{
     align-self: center;
     text-align: center;
 }
-#links{
+.links{
+    position: relative;
+    top: 150px;
     font-family: 'Courier New', Courier, monospace;
     border: 0;
     margin: auto;
@@ -46,16 +51,19 @@ body{
     align-content: center;
     text-align: center;
 }
-#icone{
+.icone{
+    position: relative;
     display: inline-block;
     width: 100px;
     height: 100px;
-    border-radius: 20%;
+    border-radius: 15px;
     margin-left: 10px;
     margin-right: 10px;
     border: 0;
 }
-#secret{
+.secret{
+    position: relative;
+    top: 150px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-style: italic;
