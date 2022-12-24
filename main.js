@@ -61,21 +61,25 @@ function clock() {
   let hora = tempo.getHours();
   let horario = tempo.getHours();
   let periodo = "";
-  if (horario > 5 && horario < 12) {
+  if (horario >= 5 && horario < 12) {
     periodo = "Bom dia";
-  } else if (horario > 12 && horario < 19) {
+  } else if (horario >= 12 && horario < 19) {
     periodo = "Boa tarde";
   } else {
     periodo = "Boa noite";
   }
   let ampm = "";
-  if (hora > 12) {
-    hora = hora - 12;
+  if (hora > 11) {
     ampm = "PM";
-  } else if (hora < 12) {
+  } else if (hora > 12) {
+    hora = hora - 12;
+  } else {
     ampm = "AM";
   }
   minuto = tempo.getMinutes();
+  if (minuto < 10) {
+    minuto = "0" + minuto;
+  }
   let segundo = tempo.getSeconds();
   if (segundo < 10) {
     segundo = "0" + segundo;
