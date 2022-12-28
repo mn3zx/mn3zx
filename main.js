@@ -71,10 +71,11 @@ function clock() {
   let ampm = "";
   if (hora > 11) {
     ampm = "PM";
-  } else if (hora > 12) {
-    hora = hora - 12;
-  } else {
+  }else {
     ampm = "AM";
+  }
+  if (horario > 12) {
+    hora = hora - 12;
   }
   minuto = tempo.getMinutes();
   if (minuto < 10) {
