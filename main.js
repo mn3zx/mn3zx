@@ -1,63 +1,36 @@
-let g = 0;
+//let g = 0;
+//function giraBg() {
+//  document.getElementById("gradiente").style.background =
+//    "linear-gradient(" + g + "deg, #d984a3 0%, #bf4226 100%)";
+//  if (g < 360) {
+//    g++;
+//  } else {
+//    g = 0;
+//  }
+//}
+//setInterval(giraBg, 5);
+//O código abaixo é a versão feita por ChatGPT do código acima.
+
 function giraBg() {
-  document.getElementById("gradiente").style.background =
-    "linear-gradient(" + g + "deg, #d984a3 0%, #bf4226 100%)";
-  if (g < 360) {
-    g++;
-  } else {
-    g = 0;
-  }
+  const gradiente = document.getElementById("gradiente");
+  let angulo = gradiente.dataset.angulo || 0;
+  gradiente.style.background = `linear-gradient(${angulo}deg, #d984a3 0%, #bf4226 100%)`;
+  angulo = (parseInt(angulo) + 1) % 360;
+  gradiente.dataset.angulo = angulo;
+  requestAnimationFrame(giraBg);
 }
-setInterval(giraBg, 5);
+requestAnimationFrame(giraBg);
 
 function clock() {
   let tempo = new Date();
   let ano = tempo.getFullYear();
-  let mes = tempo.getMonth() + 1;
-  let nomeMes = "";
-  if (mes == 1) {
-    nomeMes = "Janeiro";
-  } else if (mes == 2) {
-    nomeMes = "Fevereiro";
-  } else if (mes == 3) {
-    nomeMes = "Março";
-  } else if (mes == 4) {
-    nomeMes = "Abril";
-  } else if (mes == 5) {
-    nomeMes = "Maio";
-  } else if (mes == 6) {
-    nomeMes = "Junho";
-  } else if (mes == 7) {
-    nomeMes = "Julho";
-  } else if (mes == 8) {
-    nomeMes = "Agosto";
-  } else if (mes == 9) {
-    nomeMes = "Setembro";
-  } else if (mes == 10) {
-    nomeMes = "Outubro";
-  } else if (mes == 11) {
-    nomeMes = "Novembro";
-  } else {
-    nomeMes = "Dezembro";
-  }
+  let mes = tempo.getMonth();
+  let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+  let nomeMes = meses[mes];
   let diaMes = tempo.getDate();
   let diaSemana = tempo.getDay();
-  let nomeDiaSemana = "";
-  if (diaSemana == 0) {
-    nomeDiaSemana = "Domingo";
-  } else if (diaSemana == 1) {
-    nomeDiaSemana = "Segunda-feira";
-  } else if (diaSemana == 2) {
-    nomeDiaSemana = "Terça-feira";
-  } else if (diaSemana == 3) {
-    nomeDiaSemana = "Quarta-feira";
-  } else if (diaSemana == 4) {
-    nomeDiaSemana = "Quinta-feira";
-  } else if (diaSemana == 5) {
-    nomeDiaSemana = "Sexta-feira";
-  } else {
-    nomeDiaSemana = "Sábado";
-  }
+  let diasDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+  let nomeDiaSemana = diasDaSemana[diaSemana];
   let hora = tempo.getHours();
   let horario = tempo.getHours();
   let periodo = "";
@@ -89,3 +62,22 @@ function clock() {
   display.innerHTML = periodo + ", hoje é " + nomeDiaSemana + "," + "<br>" + "dia " + diaMes + " de " + nomeMes + " de " + ano + "." + "<br>" + "São " + hora + ":" + minuto + ":" + segundo + " " + ampm + ".";
 }
 setInterval(clock, 500);
+
+// O Código a seguir foi produzido pelo ChatGPT para ser mais compacto, porém não fica formatado de maneira satisfatória.
+//function clock() {
+//  const tempo = new Date();
+//  const options = {
+//    weekday: 'long', 
+//    year: 'numeric', 
+//    month: 'long', 
+//    day: 'numeric',
+//    hour: 'numeric',
+//    minute: 'numeric',
+//    second: 'numeric',
+//    hour12: true
+//  };
+//  const data = tempo.toLocaleDateString('pt-BR', options);
+//  const display = document.getElementById("clock");
+//  display.innerHTML = `${data}.`;
+//}
+//setInterval(clock, 500);
