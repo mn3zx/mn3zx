@@ -1,4 +1,6 @@
-### Hi there 👋
+### The secret awaits eyes unclouded by ambition
+## Those who are bound by desire see only that which can be held in their hands
+Leroy
 
 <!--
 **mn3zx/mn3zx** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
