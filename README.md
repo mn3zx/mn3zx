@@ -1,5 +1,5 @@
-### The secret awaits eyes unclouded by ambition
-## Those who are bound by desire see only that which can be held in their hands
+## The secret awaits eyes unclouded by ambition
+### Those who are bound by desire see only that which can be held in their hands
 Leroy
 
 <!--
