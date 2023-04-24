@@ -74,7 +74,9 @@ body, html{
     height: 110px;
     background-color: #ccc;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-    transition: 100ms ease; 
+    transition: 100ms ease;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .logo{
   position: relative;
@@ -85,8 +87,9 @@ body, html{
   width: 400px;
 }
 .secret{
-    position: relative;
-    top: 50px;
+    position: fixed;
+    top: 850px;
+    margin-left: calc(50% - 255px);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-style: italic;
@@ -104,10 +107,15 @@ body, html{
     .titulo {
       font-size: 60px;
       line-height: 6vh;
+      top: 10px;
     }
   
     #clock {
       font-size: medium;
+      top: 40px;
+    }
+    .logo{
+      top: 50px;
     }
   }
 /* Estilos para dispositivos de tela grande */
@@ -138,9 +146,11 @@ body, html{
       grid-gap: 10px;
       margin-left: auto;
       margin-right: auto;
-      top: -440px;
+      top: -500px;
     }
     .secret{
-      top: -400px;
+      top: 760px;
+      font-size: smaller;
+      margin-left: calc(50% - 185px);
     }
   }
